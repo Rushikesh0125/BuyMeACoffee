@@ -1,0 +1,41 @@
+.navClass{
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 1px 0 10px rgba(171,120,78,0.6);
+}
+
+.nameContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
+.nameContainer h2{
+    margin-left: 15px;
+}
+
+.logo{
+    width: 20%;
+    height: 70%;
+}
+
+.filler{
+    display: flex;
+    width: 45%;
+}
+
+.addressDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.addressDiv h4{
+    margin: 0;
+}
+.addressDiv p{
+    margin: 0;
+}

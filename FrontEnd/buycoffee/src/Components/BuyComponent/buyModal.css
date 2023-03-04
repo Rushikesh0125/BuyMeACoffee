@@ -1,0 +1,55 @@
+.modalCont{
+    display: flex;
+    flex-direction: column;
+    padding : 10px;
+    width: 30%;
+    position: fixed;
+    background-color: cornsilk;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modalWrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(189,189,189,0.7);
+}
+.headCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headText{
+    font-weight: 500;
+}
+.formCont{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.inputSec{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    gap: 5px;
+}
+.nameIn{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    border: solid black 1px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 0 2px rgba(171,120,78,0.6);
+}
+.submitBtn{
+    height: 30px;
+    border-radius: 5px;
+    border: solid black 1px;
+    transition: border 1s background-color 1s;
+    background-color: rgba(237, 200, 156, 0.395);
+}
