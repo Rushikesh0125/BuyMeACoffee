@@ -1,6 +1,8 @@
 import "./buyModal.css"
 import React, {useState} from 'react'
-import buyACoffee from '../../Contract/ContractFunctions'
+import { BuyMeCoffeeInstance } from "../../Contract/Instance"
+import { parseEther } from "ethers/lib/utils"
+import { ethers } from "ethers"
 
 const BuyModal = (props) => {
 
@@ -12,8 +14,23 @@ const BuyModal = (props) => {
     setFormValues({...formValues, [name] : value});
   }
 
-  const handleSubmit = async() => {
-   props.setOpenModal(false);
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    try{
+      const contract = await BuyMeCoffeeInstance();
+      const txn = await contract.buyCoffee(
+        formValues.name, 
+        formValues.Message, 
+        {value: ethers.utils.parseEther("0.0025")}
+        )
+      await txn.wait();
+      props.setOpenModal(false);
+      formValues.name = "";
+      formValues.Message = "";
+    }catch(err){
+      console.log(err);
+    }
+   
   }
 
   return (

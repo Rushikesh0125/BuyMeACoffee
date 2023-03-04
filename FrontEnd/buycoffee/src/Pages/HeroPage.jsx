@@ -40,7 +40,7 @@ const HeroPage = (props) => {
 
   function onOpen(){
     setOpenModal(!openModal);
-    console.log(openModal)
+    console.log(process.env.REACT_APP_BUY_ME_COFFEE_CONTRACT_ADDRESS)
   }
 
 

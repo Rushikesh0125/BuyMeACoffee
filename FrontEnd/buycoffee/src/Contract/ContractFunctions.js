@@ -9,14 +9,6 @@ const getMsgList = async() => {
     return Msges;
 }
 
-const buyACoffee = async(name, message) => {
-    const buyMeCoffeeInst = await BuyMeCoffeeInstance();
-    const tip = {value : formatEther("0.1")};
-    try{await buyMeCoffeeInst.buyCoffee(name, message,tip);}
-    catch(err){
-        console.log(err)
-    }
-}
 
 const withDrawFunds = async() => {
     const buyMeCoffee = await BuyMeCoffeeInstance();
@@ -37,4 +29,4 @@ const mintFor = async (address, amount) => {
     await forToken.mint(address, amount);
 }
 
-export default {getMsgList, buyACoffee, withDrawFunds,isFren,mintFor}
+export default {getMsgList, withDrawFunds,isFren,mintFor}
